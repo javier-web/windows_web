@@ -17,12 +17,12 @@
     </head>
 
     <body>
-        <br>
-        <h2 style="line-height: normal; width: 850px; color: white; background-color: #6699ff">Formulario de gestión de alumnos</h2>
+        
+        <h2 style="line-height: normal; width: 100%; color: white; background-color: #6699ff">Formulario de gestión de alumnos</h2>
         <br>
         
-        <div class="container" style="width: 850px;">
-            <h4 style="color: #999999; background-color: #ffffff; height: 50px; margin-bottom: 40px"><br>Introduzca la información que se solicita a continuacion:</h4>
+        <div class="container" style="width: 58%; height: 535px">
+            <h4 style="color: #999999; background-color: #ffffff; height: 50px; margin-bottom: 40px"><br>Introduzca la información que se solicita a continuación:</h4>
             <form class="form" id="myForm" action="nuevo_alumno.php" method = "post" enctype="multipart/form-data" style=" width: 300px">
 
                 <div class="form-group">
@@ -70,7 +70,6 @@
 
                 ?>
 
-
                 <div class="form-group">
                     <br><label for="nota">Nota media:</label>
                     <input type="date" name="nota"  class="form-control" id="nota" placeholder="Nota media" style=" width: 150px">
@@ -80,7 +79,8 @@
                     <label for="foto">Fotografía:</label>
                     <input type="file" name="file" id="foto"><br>
                 </div>
-                <div style=" width: 240px; margin: 0px 475px">
+            </form>    
+                <div class=botones style=" width: 185px;">
                     <input  type="button" onclick="myFunction()" value="Borrar" style=" cursor: pointer; width: 80px; 
                             background-color: #ff9999; box-shadow: 10px 5px 5px silver ">
 
@@ -91,10 +91,8 @@
                             style="cursor: pointer; width: 180px; color: black; background-color: #99ffcc; 
                             margin-top: 10px; text-align: center; box-shadow: 10px 5px 5px silver;"></a>
                      
-                </div>
-                <br>
-            </form>
-            <br>
+                </div>                
+                       
         </div>
 
 
