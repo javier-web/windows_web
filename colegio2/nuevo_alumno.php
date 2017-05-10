@@ -6,7 +6,7 @@
         <title>Nuevo_alumno</title>
         <link rel="stylesheet" href="estilos_formulari.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="description" content="Formulario_alumno">
         <meta name="keywords" content="Formulario_alumno"/>
         <meta name="author" content="JFR">

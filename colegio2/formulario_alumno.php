@@ -6,7 +6,7 @@
         <title>Formulario_alumno</title>
         <link rel="stylesheet" href="estilos_formulario.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="description" content="Formulario_alumno">
         <meta name="keywords" content="Formulario_alumno"/>
         <meta name="author" content="JFR">
@@ -18,11 +18,11 @@
 
     <body>
         <br>
-        <h2 style="line-height: normal; width: 850px; color: white; background-color: #6699ff">Formulario de gestión de alumnos</h2>
+        <h2 style="line-height: normal; width: 850px; color: white; background-color: #6699ff">Formulario de gestiÃ³n de alumnos</h2>
         <br>
         
         <div class="container" style="width: 850px;">
-            <h4 style="color: #999999; background-color: #ffffff; height: 50px; margin-bottom: 40px"><br>Introduzca la información que se solicita a continuacion:</h4>
+            <h4 style="color: #999999; background-color: #ffffff; height: 50px; margin-bottom: 40px"><br>Introduzca la informaciÃ³n que se solicita a continuacion:</h4>
             <form class="form" id="myForm" action="nuevo_alumno.php" method = "post" enctype="multipart/form-data" style=" width: 300px">
 
                 <div class="form-group">
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="foto">Fotografía:</label>
+                    <label for="foto">FotografÃ­a:</label>
                     <input type="file" name="file" id="foto"><br>
                 </div>
                 <div style=" width: 240px; margin: 0px 475px">
