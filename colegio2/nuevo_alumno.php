@@ -4,7 +4,7 @@
 <html lang="es">
     <head>
         <title>Nuevo_alumno</title>
-        <link rel="stylesheet" href="estilos_formulari.css"/>
+        <link rel="stylesheet" href="estilos_formulario.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta charset="utf-8">
         <meta name="description" content="Formulario_alumno">
@@ -13,15 +13,21 @@
     </head>
 
     <body>
-
+        <h2 style="line-height: normal; width: 100%; color: white; background-color: #6699ff">Formulario de gestión de alumnos</h2>
+        <br>
+        
         <?php
-        
-        
-        $db = new PDO('mysql:host=localhost;dbname=colegio;charset=utf8','root','');
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
 
-                
-        move_uploaded_file($_FILES['file']['tmp_name'], 'C:/xampp/htdocs/colegio2/foto_alumno.jpg');
+
+        $db = new PDO('mysql:host=localhost;dbname=colegio;charset=utf8', 'root', '');
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $nombreArchivo = md5(uniqid());
+
+        move_uploaded_file($_FILES['file']['tmp_name'], "uploads/" . $nombreArchivo);
 
         echo '<br>';
 
@@ -29,38 +35,39 @@
                 VALUES  ('" . $_POST['curso'] . "' ,
                          '" . $_POST['nombre'] . "' ,
                          '" . $_POST['apellidos'] . "' ,
-                         '" . $_POST['date'] . "' ,
+                         '" . date("Y-m-d", strtotime($_POST['date'])) . "' ,
                          '" . $_POST['nota'] . "' ,
-                         '" . $_FILES['file']['name'] . "')";
+                         '" . $nombreArchivo . "')";
 
         try {
             $st = $db->prepare($sql);
             $st->execute();
-            
         } catch (PDOException $e) {
             echo $e->getMessage();
             return false;
         }
-        
-
-
-       
         ?>
-        
+
         <br>
-        <h4 style=" width: 383px; text-align: center; margin:10px 10px; background-color:#00ff99 ; box-shadow: 10px 5px 5px silver">Registro introducido correctamente</h4>
-        <a href="datatable_alumno.php" >
-            <input  type="submit" value="Tabla de alumnos"
-            style=" width: 180px; margin:10px 10px; background-color: #99ffcc; box-shadow: 10px 5px 5px silver">
-        </a>
-        <a href="formulario_alumno.php" >
-            <input  type="submit" value="Formulario"
-            style=" width: 180px; margin:10px 10px; background-color: #99ffcc; box-shadow: 10px 5px 5px silver">
-        </a>
-        <br>
-        
-        
-        
+        <div class="content">
+            <br><br><br>
+            <marquee height="100" direction="up" scrolldelay="200" behavior="slide">
+                <h3 class="marquee" >Registro introducido correctamente</h3></marquee>
+            <div class="botonera">   
+                <a href="formulario_alumno.php" >
+                    <input class="buttons" type="submit" value="Formulario" title="Añadir nuevos alumnos">
+                </a>
+                <a href="datatable_alumno.php" >
+                    <input class="buttons" type="submit" value="Lista de alumnos" title="Ver lista de alumnos">
+                </a>
+
+            </div>
+            <br><br>
+        </div>
+
+
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
         <script src="https://cdn.datatables.net/plug-ins/1.10.15/sorting/datetime-moment.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>

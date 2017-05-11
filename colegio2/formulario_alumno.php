@@ -45,6 +45,11 @@
                 </div>
 
                 <?php
+                
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
+                
                 $db = new PDO('mysql:host=localhost;dbname=colegio;charset=utf8','root','');
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
                 
@@ -79,7 +84,7 @@
                     <label for="foto">Fotografía:</label>
                     <input type="file" name="file" id="foto"><br>
                 </div>
-            </form>    
+                
                 <div class=botones style=" width: 185px;">
                     <input  type="button" onclick="myFunction()" value="Borrar" style=" cursor: pointer; width: 80px; 
                             background-color: #ff9999; box-shadow: 10px 5px 5px silver ">
@@ -88,11 +93,11 @@
                             background-color: #00ff66; box-shadow: 10px 5px 5px silver;  margin-left: 15px">
                     
                     <a href="datatable_alumno.php"  ><input type="button" value="Tabla de alumnos" name="submit" 
-                            style="cursor: pointer; width: 180px; color: black; background-color: #99ffcc; 
+                            style="cursor: pointer; width: 180px; color: black; background-color: #6699ff; 
                             margin-top: 10px; text-align: center; box-shadow: 10px 5px 5px silver;"></a>
                      
                 </div>                
-                       
+            </form>           
         </div>
 
 

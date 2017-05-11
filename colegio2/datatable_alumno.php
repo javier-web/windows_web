@@ -19,6 +19,12 @@
     <body>
 
         <?php
+        
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+        
+        
         $db = new PDO('mysql:host=localhost;dbname=colegio;charset=utf8', 'root', '');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -55,7 +61,7 @@
         echo '<thead>';
         echo '<tr>';
         foreach ($nombreColumnas as $nombreColumna) {
-            echo '<td style="background-color: #333333 ; color: white; font-size:16px">' . $nombreColumna . '</td>';
+            echo '<td style="background-color: #333333 ; color: white; font-size:16px; text-align:center">' . $nombreColumna . '</td>';
         }
         echo '</tr>';
         echo '</thead>';
@@ -78,13 +84,13 @@
         while ($fila = $st->fetch(PDO::FETCH_ASSOC)) {
 
             echo '<tr>';
-            echo '<td style="width: 5px font-size:13px">' . $fila ['id'] . '</td>';
-            echo '<td style="width: 5px font-size:13px">' . $fila ['curso_id'] . '</td>';
+            echo '<td style="width: 5px; font-size:13px">' . $fila ['id'] . '</td>';
+            echo '<td style="width: 5px; font-size:13px">' . $fila ['curso_id'] . '</td>';
             echo '<td style="font-size:13px">' . $fila ['nombre'] . '</td>';
             echo '<td style="font-size:13px">' . $fila ['apellidos'] . '</td>';
             echo '<td style="width: 15px; text-align:center; font-size:13px">' . date("d-m-Y", strtotime($fila ['fecha_nacimiento'])) . '</td>';
             echo '<td style="width: 5px; text-align:center; font-size:13px">' . number_format($fila ['nota'], 2, ",", ".") . '</td>';
-            echo '<td style="font-size:13px">' . $fila ['foto'] . '</td>';
+            echo '<td style="font-size:13px; text-align:center"><img src="uploads/' . $fila ['foto'] . '"></td>';
             echo '</tr>';
         }
 
@@ -95,7 +101,7 @@
 
         echo '<a href="formulario_alumno.php" >';
         echo '<input  type="submit" value="Volver al formulario"
-                style=" width: 180px; margin:10px 10px; background-color: #00ff66; color: blue; box-shadow: 10px 5px 5px silver">
+                style=" width: 180px; height: 30px; margin:10px 10px; background-color: #00ff66; color: blue; box-shadow: 10px 5px 5px silver">
     </a>';
 
         echo '</div>';
@@ -111,6 +117,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/colreorder/1.3.3/js/dataTables.colReorder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
         <script src="https://cdn.datatables.net/plug-ins/1.10.15/sorting/datetime-moment.js"></script>
         <script src="javascript_formulario.js"></script>

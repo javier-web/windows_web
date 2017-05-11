@@ -69,11 +69,56 @@ h4{
 
 .botones {
     position: relative;
-    left: 475px;
-    bottom: 180px;
+    left: 400px;
+    bottom: 95px;
 
 }
 
+img {
+    width: 50%;
+}
+
+.content {
+   
+    background-color: #ffffcc;
+    width: 50%;
+    height: 248px;
+    margin: 0 auto;
+    border: 15px solid #ffffcc;
+    //border-radius: 8px;
+    //border-style: inset;
+    box-shadow: 10px 10px 10px silver;
+}
+
+
+.marquee {
+    width: 483px; 
+    padding-top:15px ; 
+    padding-bottom:15px ; 
+    vertical-align: central;
+    text-align: center; 
+    margin:10px 10px; 
+    background-color:#00ff99 ; 
+    box-shadow: 10px 5px 5px silver;
+    border-radius: 7px; margin: 0 auto;
+}
+
+.botonera {
+    margin-left: 100px;
+}
+
+.buttons {
+    width: 180px; 
+    height: 30px;
+    margin:10px 10px; 
+    color: black;
+    font-weight: bold;
+    //font-stretch: condensed;
+    background-color: #99ffcc; 
+    box-shadow: 10px 5px 5px silver;
+    //border: 5px solid grey;
+    //border-style: outset; 
+}
 
 
 
