@@ -36,7 +36,7 @@
                          '" . $_POST['nombre'] . "' ,
                          '" . $_POST['apellidos'] . "' ,
                          '" . date("Y-m-d", strtotime($_POST['date'])) . "' ,
-                         '" . $_POST['nota'] . "' ,
+                         '" . str_replace(",",".",$_POST['nota']) . "' ,
                          '" . $nombreArchivo . "')";
 
         try {
@@ -51,7 +51,7 @@
         <br>
         <div class="content">
             <br><br><br>
-            <marquee height="100" direction="up" scrolldelay="200" behavior="slide">
+            <marquee height="100" direction="up" scrolldelay="100" behavior="slide">
                 <h3 class="marquee" >Registro introducido correctamente</h3></marquee>
             <div class="botonera">   
                 <a href="formulario_alumno.php" >

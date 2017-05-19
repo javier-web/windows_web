@@ -85,18 +85,19 @@
                     <input type="file" name="file" id="foto"><br>
                 </div>
                 
-                <div class=botones style=" width: 185px;">
+                <div class="botones_formulario" style=" width: 185px;">
                     <input  type="button" onclick="myFunction()" value="Borrar" style=" cursor: pointer; width: 80px; 
                             background-color: #ff9999; box-shadow: 10px 5px 5px silver ">
 
                     <input  type="submit" value="Enviar" name="submit" style=" cursor: pointer; width: 80px;
                             background-color: #00ff66; box-shadow: 10px 5px 5px silver;  margin-left: 15px">
                     
-                    <a href="datatable_alumno.php"  ><input type="button" value="Tabla de alumnos" name="submit" 
-                            style="cursor: pointer; width: 180px; color: black; background-color: #6699ff; 
-                            margin-top: 10px; text-align: center; box-shadow: 10px 5px 5px silver;"></a>
+                    <a href="datatable_alumno.php"  class="nounderline" ><input title="Ver lista de alumnos" type="button" value="Tabla de alumnos" name="submit" 
+                            style="cursor: pointer; width: 180px; color: white; background-color: #6699ff; 
+                            margin-top: 12px; height: 25px; text-align: center; box-shadow: 10px 5px 5px silver;"></a>
                      
-                </div>                
+                </div>       
+                
             </form>           
         </div>
 

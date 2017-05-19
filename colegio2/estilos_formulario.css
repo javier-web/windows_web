@@ -38,6 +38,10 @@ main {
     height: 75%;
 }
 
+a.nounderline:link   
+{   
+    text-decoration:none;   
+}   
 
 h2{
     font-family: Calibri;
@@ -67,19 +71,44 @@ h4{
 
 }
 
-.botones {
+#botons1 {
     position: relative;
-    left: 400px;
+    left: 902px;
+    bottom: -147px;
+    z-index: 1000;
+} 
+
+.botons {
+    position: relative;
+    left: 590px;
+    bottom: 90px;
+
+} 
+
+
+.botones_formulario {
+    position: relative;
+    left: 475px;
     bottom: 95px;
+    //left: 590px;
+    //bottom: 325px;
 
 }
 
+.botones_mostrar {
+    position: relative;
+    left: 475px;
+    bottom: 395px;
+    //left: 590px;
+    //bottom: 325px;
+
+}
 img {
     width: 50%;
 }
 
 .content {
-   
+
     background-color: #ffffcc;
     width: 50%;
     height: 248px;
@@ -105,21 +134,33 @@ img {
 
 .botonera {
     margin-left: 100px;
+    //margin-left: 140px;
 }
 
 .buttons {
     width: 180px; 
     height: 30px;
-    margin:10px 10px; 
-    color: black;
+    margin:10px 31px; 
+    color: white;
     font-weight: bold;
+    background-color:#6699ff;
     //font-stretch: condensed;
-    background-color: #99ffcc; 
+    //background-color: #99ffcc; 
     box-shadow: 10px 5px 5px silver;
     //border: 5px solid grey;
     //border-style: outset; 
 }
 
+.foto-alumno {
+    position: relative;
+    bottom: 340px;
+    left: 400px;
+    width: 400px;
+    height: 400px;
+}
+
+#fotografia {
+}
 
 
 @media screen and (max-width: 1100px) {
