@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: silver;
+    background-color: #e7e5e5;
     margin: 0 auto;
 }
 
@@ -29,13 +29,21 @@ main {
     width: 700px;
     margin-bottom: 50px;
     box-shadow: 10px 10px 10px grey;
+    margin: 0 auto;
+    position: rabsolute;
 }
 
 
 #myForm {
     margin-left: 100px;
+    height: 75%;
+    width: 300px;
 }
 
+a.nounderline:link   
+{   
+    text-decoration:none;   
+}   
 
 h2{
     font-family: Calibri;
@@ -65,21 +73,170 @@ h4{
 
 }
 
-.button {
-    background-color: #00ff66;
-    border: none;
-    color: white;
-    padding: 5px 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    box-shadow: 10px 5px 5px silver;
-    margin: 10px 475px;
+
+
+.botones_formulario {
+    position: relative;
+    left: 475px;
+    bottom: 90px;
+
 }
 
+.botones_mostrar {
+    width: 185px;
+    position: relative;
+    left: 475px;
+    bottom: 400px;
+}
+
+.botones_mostrar input {
+    cursor: pointer; 
+    width: 180px; 
+    color: white; 
+    background-color: #6699ff; 
+    margin-top: 12px; 
+    height: 25px; 
+    text-align: center; 
+    box-shadow: 10px 5px 5px silver;
+
+}
+
+
+.botones_editar {
+    position: relative;
+    left: 475px;
+    bottom: 540px;
+}
+
+.botones_editar input {
+    cursor: pointer; 
+    width: 180px; 
+    color: white; 
+    background-color: #6699ff; 
+    margin-top: 12px; 
+    height: 25px; 
+    text-align: center; 
+    box-shadow: 10px 5px 5px silver;
+
+}
+
+
+.botones_visualizar {
+    width: 185px;
+    position: relative;
+    left: 475px;
+    bottom: 450px;
+
+}
+
+
+.botones_visualizar input {
+    cursor: pointer; 
+    width: 180px; 
+    color: white; 
+    background-color: #6699ff; 
+    margin-top: 12px; 
+    height: 25px; 
+    text-align: center; 
+    box-shadow: 10px 5px 5px silver;
+
+}
+
+.botones_tabla {
+    width: 180px; 
+    height: 25px; 
+    font-size: 12px; 
+    margin:20px 10px; 
+    text-align: center;
+    margin-left: 780px; 
+    background-color: #6699ff; 
+    color: white; 
+    box-shadow: 10px 5px 5px silver;
+
+}
+
+.botones {
+    position: relative;
+    left: 590px;
+    bottom: 405px;
+
+}
+
+img {
+    width: 50%;
+}
+
+.content {
+
+    background-color: #ffffcc;
+    width: 50%;
+    height: 248px;
+    margin: 0 auto;
+    border: 15px solid #ffffcc;
+    //border-radius: 8px;
+    //border-style: inset;
+    box-shadow: 10px 10px 10px silver;
+}
+
+
+.marquee {
+    width: 483px; 
+    padding-top:15px ; 
+    padding-bottom:15px ; 
+    vertical-align: central;
+    text-align: center; 
+    margin:10px 10px; 
+    background-color:#00ff99 ; 
+    box-shadow: 10px 5px 5px silver;
+    border-radius: 7px; margin: 0 auto;
+}
+
+.botonera {
+    margin-left: 140px;
+}
+
+.buttons {
+    width: 180px; 
+    height: 30px;
+    margin:10px 31px; 
+    color: white;
+    font-weight: bold;
+    background-color:#6699ff;
+    //font-stretch: condensed;
+    //background-color: #99ffcc; 
+    box-shadow: 10px 5px 5px silver;
+    //border: 5px solid grey;
+    //border-style: outset; 
+}
+
+
+.mostrar-foto-alumno {
+    position: relative;
+    bottom: 350px;
+    left: 450px;
+    width: 400px;
+    height: 400px;
+}
+
+.editar-foto-alumno {
+    position: relative;
+    bottom: 440px;
+    left: 450px;
+    width: 400px;
+    height: 400px;
+}
+
+.botonera {
+    margin-left: 100px;
+}
+
+#identificador {
+    display: none;
+}
+
+.paginacion {
+    text-align: center;
+}
 
 
 @media screen and (max-width: 1100px) {

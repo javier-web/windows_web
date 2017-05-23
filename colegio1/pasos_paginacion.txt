@@ -1,0 +1,31 @@
+Paso 0: crear lista_alumno_sin_datatables.php
+Paso 1: calcular el numero de páginas 
+
+Numero total de página = Número total de filas / Número de filas por página
+Número total de páginas se calcula con el COUNT(*)
+
+Paso 2: pintar enlaces debajo de la tabla.
+
+Paso 3: tras pinchar en el enlace, recuperar el número pasado en el parametro "página=" de la URL.
+
+Paso 4: asignar número de pagina = 1, si no se pasa parametro.
+
+Paso 5: calcular OFFSET (Número de filas por página * ) y ejecutar SELECT.
+----------------------------------------------------------------
+<a href="lista_alumno_sin_datatable.php?pagina=1"> 1 </a>
+
+<a href="lista_alumno_sin_datatable.php?pagina=2"> 2 </a>
+
+<a href="lista_alumno_sin_datatable.php?pagina=3"> 3 </a>
+
+Pagina 1: (5 * (1 - 1)) => OFFSET 0
+SELECT * FROM alumno LIMIT 5 OFFSET 0
+
+Pagina 2: (5 * (2 - 1)) => OFFSET 5
+SELECT * FROM alumno LIMIT 5 OFFSET 5
+
+Pagina 3: (5 * (3 - 1)) => OFFSET 10
+SELECT * FROM alumno LIMIT 5 OFFSET 10
+
+<< < 1 2 3 4 > >>
+
