@@ -86,7 +86,7 @@ h4{
     width: 185px;
     position: relative;
     left: 475px;
-    bottom: 400px;
+     bottom: 440px;
 }
 
 .botones_mostrar input {
@@ -105,7 +105,7 @@ h4{
 .botones_editar {
     position: relative;
     left: 475px;
-    bottom: 540px;
+    bottom: 525px;
 }
 
 .botones_editar input {
@@ -153,6 +153,15 @@ h4{
     color: white; 
     box-shadow: 10px 5px 5px silver;
 
+}
+
+.columna-botones {
+    //width:12%;
+    background-color: #333333 ; 
+    color: white; 
+    font-size:16px; 
+    text-align: center
+    
 }
 
 .botones {

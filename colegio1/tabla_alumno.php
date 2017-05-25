@@ -121,16 +121,16 @@
                 //var_dump('nombrecolumna = ' .$nombreColumna);
             ?>
                        
-            <th>
+            <th class="columna-botones">
                 <!-- generamos la url -->
-                <a href="tabla_alumno.php?<?php echo $parametrosUrl ?>">
+                <a href="tabla_alumno.php?<?php echo $parametrosUrl ?>" style="color: white;">
                     
                     <!-- generamos elnombre del enlace -->
                     <?php
                     if ($nombreColumna == 'curso_id') {
                                    echo'curso';
                         } else if ($nombreColumna == 'fecha_nacimiento') {
-                                  echo'fecha nacimiento';
+                                  echo'fecha de nacimiento';
                         } else {
                                    echo " $nombreColumna " ; 
                     };
