@@ -51,9 +51,9 @@
 
                 foreach ($columnas as $clave => $columna) {
                     if ($clave == 'nombre') {
-                        echo '<div class = "form-group">';
+                        echo '<div class = "form-group" >';
                         echo '<label for = "nombre">Nombre del alumno:</label>';
-                        echo '<input class = "form-control" type = "text" name = "' . $clave . '" value = "' . $columna . '" disabled>';
+                        echo '<input class = "form-control" type = "text" name = "' . $clave . '" value = "' . $columna . '" disabled';
                         echo '</div>';
                         
                     } else if ($clave == 'apellidos') {

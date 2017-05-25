@@ -131,7 +131,7 @@
                     </a> 
                                   
                                   
-                    <a href="editar_alumno.php?id=' . $columna . '"  class="nounderline" >
+                    <a href="editar_alumno.php?id=<?php echo $_GET['id'] ?>" class="nounderline" >
                         <input title="Ver lista de alumnos" type="button" value="Modificar datos de alumno" name="submit">
                     </a> 
                                   
